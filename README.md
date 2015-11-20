@@ -24,7 +24,7 @@
 ## 使用流程
 使用方法很简单，到任意想要弹幕互动的网页上，打开扩展程序即可使用。下面以北邮IPTV为例： 
  
-1. 首先进入任一个频道的播放页（如http://tv.byr.cn/desktop/player.html?channel=cctv5hd，当然首页也是可以的），然后点击浏览器右上角的![](http://7qnaj2.com1.z0.glb.clouddn.com/右上角.jpg)
+1. 首先进入任一个频道的播放页（如[](http://tv.byr.cn/desktop/player.html?channel=cctv5hd)，当然首页也是可以的），然后点击浏览器右上角的![](http://7qnaj2.com1.z0.glb.clouddn.com/右上角.jpg)
 2. 在接下来的pupup页面中点击激活按钮，“当前观众数”展示的是在这个频道中当前激活的用户数。  
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/initial.jpg) 
 3. 激活后状态如图，可以在输入框中输入想说的话，点击“send”或者直接回车发送  
