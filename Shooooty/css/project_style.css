@@ -1,0 +1,12 @@
+div.bullet_item {
+    -webkit-text-stroke: 0.8px #000000;
+    color: white;
+    font-weight: 900;
+    font-size: 32px;
+    height: 40px;
+    /*font-size: 38px;*/
+    font-family: 微软雅黑, 黑体;
+    overflow: hidden;
+    z-index: 100000;
+    position: fixed;
+}
