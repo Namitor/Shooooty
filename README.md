@@ -1,0 +1,2 @@
+# Shooooty
+Shooooty是一款可以在任意网页开启的，多人在线收发弹幕的Chrome扩展程序
