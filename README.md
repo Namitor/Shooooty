@@ -35,7 +35,7 @@
 ## 注意事项
 1. `频道`是以`url`进行区分的，如果您想跟朋友一起观看互动，请确保[Shooooty](https://chrome.google.com/webstore/detail/shooooty/aifdchekbmlmleaaahcdiichijehnmee?hl=zh-CN)界面中显示的“**当前网址**”一致。
 2. 目前还没有一个良好的过滤机制，请大家文明发言。
- 
+3. 暂时未支持全屏播放弹幕
 
 ## 联系作者
 有更多想法、建议、意见，欢迎直接联系Shooooty的作者  
