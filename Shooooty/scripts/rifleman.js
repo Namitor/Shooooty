@@ -108,6 +108,16 @@ function cnvs_getCoordinates(e) {
     y = e.clientY;
     console.log('x=' + x + '-y=' + y);
 }
+
+//Get Mouse Position
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: (evt.pageX - rect.left) * (canvas.width / rect.width),
+        y: (evt.pageY - rect.top) * (canvas.height / rect.height)
+    }
+}
+
 function select_range() {
     if (!document.getElementById("full_curtain")) {
         $("body").prepend("<canvas class='curtain' id='full_curtain'>Your browser does not support the canvas element.</canvas>");
@@ -130,16 +140,24 @@ function select_range() {
     // 给遮罩增加一个mousedown监听器
     var isMouseDown = false;
     var obj_curtain = $("#full_curtain");
-    obj_curtain.toggle(function (e) {
+    var rect_width = 0;
+    var rect_height = 0;
+    obj_curtain.mousedown(function (e) {
         isMouseDown = true;
-        start_x = e.clientX;
-        start_y = e.clientY;
+        var mousePos = getMousePos(ele, e);
+        start_x = mousePos.x;
+        start_y = mousePos.y;
         // mousedown后给obj_curtain增加一个mousemove监听器
         obj_curtain.mousemove(function (e) {
-            end_x = e.clientX;
-            end_y = e.clientY;
-            console.log(end_x + '-' + end_y);
-            ctx.fillRect(start_x, start_y, end_x, end_y);
+            var mousePos = getMousePos(ele, e);
+            end_x = mousePos.x;
+            end_y = mousePos.y;
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+            ctx.fillStyle = "#0000ff";
+            rect_width = end_x-start_x;
+            rect_height =  end_y-start_y;
+            ctx.fillRect(start_x, start_y, rect_width, rect_height);
         })
     });
     obj_curtain.mouseup(function (e) {
