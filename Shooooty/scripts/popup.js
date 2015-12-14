@@ -5,7 +5,7 @@ var user_id = '';
 var isAcitive = false;
 var cur_user_num = 0;
 console.log('popup');
-setTimeout('$("#bullet_content").focus()', 2000);
+setTimeout('$("#bullet_content").focus()', 2500);
 chrome.tabs.query({active: true}, function (tabs) {
     current_url = tabs[0].url;
     current_title = tabs[0].title;
@@ -127,6 +127,22 @@ $("#btn_shoot").click(function () {
     }
 });
 
+$("#btn_range").click(function () {
+    chrome.tabs.query({active: true}, function (tabs) {
+        //current_url = tabs[0].url;
+        //current_title = tabs[0].title;
+        //$("#cur_title").text('当前页面：' + current_title);
+        //$("#cur_url").text('当前网址：' + current_url);
+        chrome.tabs.sendMessage(tabs[0].id, {message: "select_range"}, function (response) {
+            if (response != null) {
+                console.log('selecting');
+            } else {
+                console.log('no response');
+            }
+            //$("#btn_switch").bootstrapSwitch('disabled', false);
+        });
+    });
+});
 
 $("#bullet_content").keydown(function (e) {
     var curKey = e.which;

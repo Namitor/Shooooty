@@ -7,8 +7,10 @@ var current_url = window.location.href;
 var user_id = '';
 var shooter;
 var isActive = false;
-
-
+var start_x = 0;
+var start_y = 0;
+var end_x = 0;
+var end_y = 0;
 
 //get_userid(current_url);//首先获取userid，给全局变量user_id赋值
 
@@ -90,8 +92,59 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
         case 'alert_msg':
             alert(request.msg);//不能在popup.html中alert，否则会关掉popup.html，所以通过消息机制进行alert
             break;
+        case 'select_range':
+            select_range();
+            break;
         default:
             break;
     }
     return true;//设为true时，sendResponse可以响应异步返回
 });
+
+
+// 选定窗口范围
+function cnvs_getCoordinates(e) {
+    x = e.clientX;
+    y = e.clientY;
+    console.log('x=' + x + '-y=' + y);
+}
+function select_range() {
+    if (!document.getElementById("full_curtain")) {
+        $("body").prepend("<canvas class='curtain' id='full_curtain'>Your browser does not support the canvas element.</canvas>");
+        $("#full_curtain").css({
+            left: 0,
+            top: 0,
+            color: '#22112',
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    }
+    var ele = document.getElementById("full_curtain");
+    console.log(ele);
+    var ctx = ele.getContext("2d");
+    //ctx.beginPath();
+    //ctx.lineWidth = 1;
+    //ctx.strokeStyle = "red";
+
+    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    // 给遮罩增加一个mousedown监听器
+    var isMouseDown = false;
+    var obj_curtain = $("#full_curtain");
+    obj_curtain.toggle(function (e) {
+        isMouseDown = true;
+        start_x = e.clientX;
+        start_y = e.clientY;
+        // mousedown后给obj_curtain增加一个mousemove监听器
+        obj_curtain.mousemove(function (e) {
+            end_x = e.clientX;
+            end_y = e.clientY;
+            console.log(end_x + '-' + end_y);
+            ctx.fillRect(start_x, start_y, end_x, end_y);
+        })
+    });
+    obj_curtain.mouseup(function (e) {
+        obj_curtain.remove();
+    });
+    //ctx.stroke();
+
+}

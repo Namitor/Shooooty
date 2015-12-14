@@ -10,3 +10,12 @@ div.bullet_item {
     z-index: 100000;
     position: fixed;
 }
+
+canvas.curtain {
+    opacity: 0.5;
+    color: #707070;
+    z-index: 1000;
+    position: fixed;
+    margin: 0;
+
+}
