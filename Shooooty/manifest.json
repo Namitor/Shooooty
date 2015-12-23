@@ -6,7 +6,7 @@
   "browser_action": {
     "default_icon": "imgs/icon.png",
     "default_popup": "popup.html",
-    "default_title": "点我！"
+    "default_title": "默认快捷键：Ctrl+Shift+Y"
   },
   "icons": {
     "16": "/imgs/icon.png",
