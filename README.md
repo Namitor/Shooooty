@@ -15,10 +15,10 @@
 ## 安装方法
 目前有两种方法使用本扩展程序
 
-- 进入Chrome应用商店的[Shooooty](https://chrome.google.com/webstore/detail/shooooty/aifdchekbmlmleaaahcdiichijehnmee?hl=zh-CN)页面安装（需翻墙）  
-- 直接下载crx文件进行安装，具体步骤：
+- （需翻墙）进入Chrome应用商店的[Shooooty](https://chrome.google.com/webstore/detail/shooooty/aifdchekbmlmleaaahcdiichijehnmee?hl=zh-CN)页面安装 
+- （无需翻墙）直接下载crx文件进行安装，具体步骤：
 	1. 首先下载Shooooty的扩展程序[安装文件](http://project-curtain.avosapps.com/download)。
-	2. 打开chrome浏览器，地址栏输入[chrome://extensions/](chrome://extensions/)
+	2. 打开chrome浏览器，地址栏输入[chrome://extensions/](chrome://extensions/)，进入扩展程序管理页面。
 	3. 把第一步下载到的Shooooty.crx拖入该页面，按提示安装。
 
 ## 使用流程
@@ -30,7 +30,7 @@
 3. 激活后状态如图，可以在输入框中输入想说的话，点击“send”或者直接回车发送  
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/input.jpg)
 4. 效果如图，在激活状态下，无需点开扩展程序，便可以持续地接收最新弹幕。如不想观看弹幕，可以随时点击“激活”按钮退出激活状态，该状态下不会接收任何弹幕。  
-![](http://7qnaj2.com1.z0.glb.clouddn.com/display.jpg)  
+![](http://7qnaj2.com1.z0.glb.clouddn.com/42.pic_hd.jpg)  
  
 ## 注意事项
 1. `频道`是以`url`进行区分的，如果您想跟朋友一起观看互动，请确保[Shooooty](https://chrome.google.com/webstore/detail/shooooty/aifdchekbmlmleaaahcdiichijehnmee?hl=zh-CN)界面中显示的“**当前网址**”一致。
