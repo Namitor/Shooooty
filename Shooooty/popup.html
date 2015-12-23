@@ -39,36 +39,74 @@
     <!-- bootstrap switch-->
     <script src="scripts/bootstrap-switch.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap-switch.min.css">
-
+    <!-- bootstrap modal-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-modal-bs3patch.css">
 
 </head>
 <body>
-<div class="container box">
-    <div class="row" id="status">
-        <div class="row">
-            <button class="col-md-12" id="hot_channel">热门频道</button>
 
-            <div class="col-md-12" id="cur_title">当前页面：</div>
-            <div class="col-md-12" id="cur_url">当前网址：</div>
-            <div class="col-md-12" id="cur_audience_num">当前观众数：</div>
-            <div class="col-md-2" id="cur_status">状态：</div>
-            <div class="col-md-4">
-                <!--<div class="bootstrap-switch" data-on-label="SI" data-off-label="NO">-->
-                <input type="checkbox" id="btn_switch">
-                <!--</div>-->
-            </div>
-            <div class="col-md-6"></div>
+<div class="container box">
+    <div class="modal-header">
+        <h4>Shooooty</h4>
+    </div>
+    <div class="modal-body">
+        <div class="col-md-12" id="cur_title">当前页面：</div>
+        <!--<div class="col-md-12" id="cur_url"  style="width: 360px">当前网址：</div>-->
+        <div class="col-md-12" id="cur_audience_num">当前观众数：</div>
+        <!--<div class="col-md-2" id="cur_status">状态：</div>-->
+        <div class="col-md-4">
+            <!--<div class="bootstrap-switch" data-on-label="SI" data-off-label="NO">-->
+            <input type="checkbox" id="btn_switch">
+            <!--</div>-->
         </div>
-        <div class="row">
-            <div class="col-md-12">
+        <div class="col-md-6"></div>
+            <div class="col-md-12" style="width: 360px">
                 <input class="col-md-8 input-sm" placeholder="说点啥吧...按回车键发送"
-                       id="bullet_content" type="text" size="60">
+                       id="bullet_content" type="text" size="36">
                 <button class="col-md-4 btn btn-primary btn-info" id="btn_shoot">send</button>
             </div>
-        </div>
-        <script src="scripts/popup.js"></script>
     </div>
+    <div class="modal-footer container" id="modal_footer">
+        <button type="button" data-dismiss="modal" class="btn btn-info" id="hot_channel">热门频道</button>
+        <button type="button" data-dismiss="modal" class="btn btn-info" id="contact_us">意见反馈</button>
+        <div class="container"style=" display: none" id = "contact_input">
+            <div class="row" >
+                    <input class="col-md-8 input-sm" id="contact_content" type="text">
+                    <button class="col-md-4 btn btn-primary btn-info" id="contact_send">send</button>
+                </div>
+        </div>
+    </div>
+
+
+    <script src="scripts/popup.js"></script>
 </div>
+
+<!--<div class="container box">-->
+    <!--<div class="row" id="status">-->
+        <!--<div class="row">-->
+            <!--<button class="col-md-12" id="hot_channel">热门频道</button>-->
+
+            <!--<div class="col-md-12" id="cur_title">当前页面：</div>-->
+            <!--<div class="col-md-12" id="cur_url"  style="width:540px;">当前网址：</div>-->
+            <!--<div class="col-md-12" id="cur_audience_num">当前观众数：</div>-->
+            <!--<div class="col-md-2" id="cur_status">状态：</div>-->
+            <!--<div class="col-md-4">-->
+                <!--&lt;!&ndash;<div class="bootstrap-switch" data-on-label="SI" data-off-label="NO">&ndash;&gt;-->
+                <!--<input type="checkbox" id="btn_switch">-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="col-md-6"></div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+                <!--<input class="col-md-8 input-sm" placeholder="说点啥吧...按回车键发送"-->
+                       <!--id="bullet_content" type="text" size="40">-->
+                <!--<button class="col-md-4 btn btn-primary btn-info" id="btn_shoot">send</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<script src="scripts/popup.js"></script>-->
+    <!--</div>-->
+<!--</div>-->
 </body>
 </html>
 

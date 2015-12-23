@@ -10,10 +10,13 @@ var isActive = false;
 
 
 function getHotChannel() {
-    alert('open')
-    window.open('http://127.0.0.1:2222')
+    window.open('http://project-curtain.avosapps.com')
 }
 //get_userid(current_url);//首先获取userid，给全局变量user_id赋值
+
+function contact_us(){
+    $('body').append('');
+}
 
 
 function start_shooting(page_url, sendResponse_handler) {
@@ -95,6 +98,9 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
             break;
         case 'get_hot_channel':
             getHotChannel();
+            break;
+        case 'contact_us':
+            contact_us();
             break;
         default:
             break;

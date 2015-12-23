@@ -54,4 +54,3 @@ function get_bullets(page_url, user_id) {
     );
 }
 
-

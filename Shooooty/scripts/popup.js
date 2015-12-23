@@ -137,7 +137,20 @@ $("#hot_channel").click(function () {
             }
         });
     });
-})
+});
+
+$("#contact_us").click(function(){
+    $('#contact_input').show();
+    $('#hot_channel').hide();
+    $('#contact_us').hide();
+});
+
+$('#contact_send').click(function(){
+    console.log('send sth...');
+    $('#contact_input').hide();
+    $('#hot_channel').show();
+    $('#contact_us').show();
+});
 
 $("#bullet_content").keydown(function (e) {
     var curKey = e.which;
