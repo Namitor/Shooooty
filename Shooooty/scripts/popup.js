@@ -146,7 +146,34 @@ $("#contact_us").click(function(){
 });
 
 $('#contact_send').click(function(){
-    console.log('send sth...');
+    $.post("http://project-curtain.avosapps.com/feedback", {
+            email: $("#contact_content").val(),
+            content: $("#feedback_content").val(),
+        },
+        function (data, status) {
+            var jsonroot = JSON.parse(data);
+            if (jsonroot.code == 0) {
+                chrome.tabs.query({active: true}, function (tabs) {
+                    chrome.tabs.sendMessage(tabs[0].id, {message: "alert_msg", msg:"发送成功"}, function (response) {
+                        if (response != null) {
+                            console.log('success');
+                        } else {
+                            console.log('no response');
+                        }
+                    });
+                });
+            }else{
+                chrome.tabs.query({active: true}, function (tabs) {
+                    chrome.tabs.sendMessage(tabs[0].id, {message: "alert_msg", msg:"发送失败"}, function (response) {
+                        if (response != null) {
+                            console.log('failed');
+                        } else {
+                            console.log('no response');
+                        }
+                    });
+                });
+            }
+        });
     $('#contact_input').hide();
     $('#hot_channel').show();
     $('#contact_us').show();
