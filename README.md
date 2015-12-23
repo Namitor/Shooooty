@@ -12,6 +12,8 @@
 
 *注：为达到最佳效果，当前版本仅支持北邮IPTV，即[http://tv.byr.cn/](http://tv.byr.cn/)及旗下各个频道*
 
+![](http://7qnaj2.com1.z0.glb.clouddn.com/jdfw.gif)
+
 ## 安装方法
 目前有两种方法使用本扩展程序
 
