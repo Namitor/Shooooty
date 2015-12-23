@@ -9,7 +9,10 @@ var shooter;
 var isActive = false;
 
 
-
+function getHotChannel() {
+    alert('open')
+    window.open('http://127.0.0.1:2222')
+}
 //get_userid(current_url);//首先获取userid，给全局变量user_id赋值
 
 
@@ -89,6 +92,9 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
             break;
         case 'alert_msg':
             alert(request.msg);//不能在popup.html中alert，否则会关掉popup.html，所以通过消息机制进行alert
+            break;
+        case 'get_hot_channel':
+            getHotChannel();
             break;
         default:
             break;

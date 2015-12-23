@@ -36,7 +36,6 @@ function setSwitchStatus(id, isStatusActive) {
     $("#" + id).bootstrapSwitch('state', isStatusActive, true);
 }
 
-
 //用户操作相关
 //boostrap switch初始化
 $("#btn_switch").bootstrapSwitch({
@@ -127,6 +126,18 @@ $("#btn_shoot").click(function () {
     }
 });
 
+$("#hot_channel").click(function () {
+    chrome.tabs.query({active: true}, function (tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {message: "get_hot_channel"}, function (response) {
+            if (response != null) {
+                console.log('open hot channel');
+                //user_id = response.result;
+            } else {
+                console.log('no response');
+            }
+        });
+    });
+})
 
 $("#bullet_content").keydown(function (e) {
     var curKey = e.which;
