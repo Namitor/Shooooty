@@ -10,7 +10,8 @@
 
 - 激活状态时，可以接收并在当前页面滚动显示实时弹幕
 
-*注：为达到最佳效果，当前版本仅支持北邮IPTV，即[http://tv.byr.cn/](http://tv.byr.cn/)及旗下各个频道*
+*注1：在北邮IPTV上观看能达到最佳效果，即[http://tv.byr.cn/](http://tv.byr.cn/)及旗下各个频道*
+*注2：暂不支持HTTPS网站*
 
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/jdfw.gif)
 
@@ -28,11 +29,16 @@
  
 1. 首先进入任一个频道的播放页（如 [http://tv.byr.cn/desktop/player.html?channel=cctv5hd](http://tv.byr.cn/desktop/player.html?channel=cctv5hd)，当然首页也是可以的），然后点击浏览器右上角的![](http://7qnaj2.com1.z0.glb.clouddn.com/corner.jpg)，或按Ctrl+Shift+Y快捷键调起popup页。
 2. 在接下来的pupup页面中点击激活按钮，“当前观众数”展示的是在这个频道中当前激活的用户数。  
-![](http://7qnaj2.com1.z0.glb.clouddn.com/initial.jpg) 
+![](http://7qnaj2.com1.z0.glb.clouddn.com/chushihua.jpg) 
 3. 激活后状态如图，可以在输入框中输入想说的话，点击“send”或者直接回车发送  
-![](http://7qnaj2.com1.z0.glb.clouddn.com/input.jpg)
-4. 效果如图，在激活状态下，无需点开扩展程序，便可以持续地接收最新弹幕。如不想观看弹幕，可以随时点击“激活”按钮退出激活状态，该状态下不会接收任何弹幕。  
-![](http://7qnaj2.com1.z0.glb.clouddn.com/42.pic_hd.jpg)  
+![](http://7qnaj2.com1.z0.glb.clouddn.com/input_text.jpg)
+4. 效果如图，在激活状态下，无需点开扩展程序，便可以持续地接收最新弹幕。如不想观看弹幕，可以随时点击“激活”按钮退出激活状态，该状态下不会接收任何弹幕。 
+![](http://7qnaj2.com1.z0.glb.clouddn.com/show_text.jpg) 
+![](http://7qnaj2.com1.z0.glb.clouddn.com/42.pic_hd.jpg)   
+5. 点击下方的`热门频道`按钮后，可以跳转至热门频道的展示页，在表格中会展示当前各频道的人数。点击`加入频道`后会打开相应的url（这可以确保您跟大家在同一个频道中交流）。
+![](http://7qnaj2.com1.z0.glb.clouddn.com/hot_channel.jpg)
+6. 如果有任何建议或意见，可以点击`意见反馈`按钮，填写Email地址（方便我们给您回复）和相应的意见内容后，发送即可。  
+![](http://7qnaj2.com1.z0.glb.clouddn.com/feedback.jpg)
  
 ## 注意事项
 1. `频道`是以`url`进行区分的，如果您想跟朋友一起观看互动，请确保[Shooooty](https://chrome.google.com/webstore/detail/shooooty/aifdchekbmlmleaaahcdiichijehnmee?hl=zh-CN)界面中显示的“**当前网址**”一致。

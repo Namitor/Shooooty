@@ -155,7 +155,7 @@ $('#contact_send').click(function(){
             var jsonroot = JSON.parse(data);
             if (jsonroot.code == 0) {
                 chrome.tabs.query({active: true}, function (tabs) {
-                    chrome.tabs.sendMessage(tabs[0].id, {message: "alert_msg", msg:"发送成功"}, function (response) {
+                    chrome.tabs.sendMessage(tabs[0].id, {message: "alert_msg", msg:"发送成功，感谢您的宝贵意见！"}, function (response) {
                         if (response != null) {
                             console.log('success');
                         } else {

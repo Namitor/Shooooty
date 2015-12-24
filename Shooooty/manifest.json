@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Shooooty",
   "description": "Wherever you want, just shoot it.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "browser_action": {
     "default_icon": "imgs/icon.png",
     "default_popup": "popup.html",
@@ -17,7 +17,8 @@
     {
       "matches": [
         "http://tv.byr.cn/*",
-        "http://bbs.byr.cn/*"
+        "http://bbs.byr.cn/*",
+        "http://*/*"
       ],
       "js": [
         "scripts/jquery-2.1.4.js",
@@ -43,6 +44,7 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
+        "default": "Ctrl+Shift+Y",
         "windows": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y",
         "chromeos": "Ctrl+Shift+U",
