@@ -93,6 +93,7 @@ $("#btn_switch").bootstrapSwitch({
                 });
             });
         }
+        $("#bullet_content").focus()
     }
 });
 
