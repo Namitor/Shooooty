@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Shooooty",
   "description": "Wherever you want, just shoot it.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "browser_action": {
     "default_icon": "imgs/icon.png",
     "default_popup": "popup.html",
@@ -28,7 +28,7 @@
       "css": [
         "css/project_style.css"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "all_frames": false
     }
   ],
@@ -44,7 +44,6 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
         "windows": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y",
         "chromeos": "Ctrl+Shift+U",

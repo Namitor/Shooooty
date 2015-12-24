@@ -75,6 +75,12 @@ function onCloseTab() {//用户关闭了页面后的操作
 
 //chrome listener 主要的popup和主页面交互中心
 chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
+    if(current_url!=window.location.href){
+        clearInterval(shooter);
+        current_url = window.location.href;
+        user_id = '';
+        isActive = false;
+    }
     switch (request.message) {
         case 'get_status':
             get_status(current_url, sendResponse);
