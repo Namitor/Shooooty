@@ -35,7 +35,7 @@
 4. 效果如图，在激活状态下，无需点开扩展程序，便可以持续地接收最新弹幕。如不想观看弹幕，可以随时点击“激活”按钮退出激活状态，该状态下不会接收任何弹幕。 
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/show_text.jpg) 
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/42.pic_hd.jpg)   
-5. 点击下方的`热门频道`按钮后，可以跳转至热门频道的展示页（或者直接访问http://project-curtain.avosapps.com/），在表格中会展示当前各频道的人数。点击`加入频道`后会打开相应的url（这可以确保您跟大家在同一个频道中交流）。
+5. 点击下方的`热门频道`按钮后，可以跳转至热门频道的展示页（或者直接访问 [http://project-curtain.avosapps.com/](http://project-curtain.avosapps.com/) ），在表格中会展示当前各频道的人数。点击`加入频道`后会打开相应的url（这可以确保您跟大家在同一个频道中交流）。
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/hot_channel.jpg)
 6. 如果有任何建议或意见，可以点击`意见反馈`按钮，填写Email地址（方便我们给您回复）和相应的意见内容后，发送即可。  
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/feedback.jpg)
