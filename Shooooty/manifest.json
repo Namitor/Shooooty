@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Shooooty",
   "description": "Wherever you want, just shoot it.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "browser_action": {
     "default_icon": "imgs/icon.png",
     "default_popup": "popup.html",
@@ -16,9 +16,8 @@
   "content_scripts": [
     {
       "matches": [
-        "http://tv.byr.cn/*",
-        "http://bbs.byr.cn/*",
-        "http://*/*"
+        "http://*/*",
+		"https://*/*"
       ],
       "js": [
         "scripts/jquery-2.1.4.js",

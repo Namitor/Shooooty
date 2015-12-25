@@ -4,6 +4,14 @@ var current_title;
 var user_id = '';
 var isAcitive = false;
 var cur_user_num = 0;
+
+var targetUrl;
+if (window.location.protocol === 'https:') {
+    targetUrl = 'https://project-curtain.avosapps.com/';
+} else {
+    targetUrl = 'http://project-curtain.avosapps.com/';
+}
+
 console.log('popup');
 setTimeout('$("#bullet_content").focus()', 2000);
 chrome.tabs.query({active: true}, function (tabs) {
@@ -101,7 +109,7 @@ $("#btn_shoot").click(function () {
     //console.log('userid:' + user_id);
     if ($('#btn_switch')[0].checked && user_id != '') {
         //console.log('send:' + $("#bullet_content").val());
-        $.post("http://project-curtain.avosapps.com/postBullet", {
+        $.post(targetUrl+"postBullet", {
                 page_url: current_url,
                 content: $("#bullet_content").val(),
                 user_id: user_id
@@ -147,7 +155,7 @@ $("#contact_us").click(function(){
 });
 
 $('#contact_send').click(function(){
-    $.post("http://project-curtain.avosapps.com/feedback", {
+    $.post(targetUrl+"feedback", {
             email: $("#contact_content").val(),
             content: $("#feedback_content").val(),
         },

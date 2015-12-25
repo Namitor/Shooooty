@@ -12,8 +12,6 @@
 
 *注1：在北邮IPTV上观看能达到最佳效果，即[http://tv.byr.cn/](http://tv.byr.cn/)及旗下各个频道*  
 
-*注2：暂不支持HTTPS网站*
-
 ![](http://7qnaj2.com1.z0.glb.clouddn.com/jdfw.gif)
 
 ## 安装方法

@@ -1,4 +1,11 @@
-﻿function sleep(numberMillis) {
+﻿var targetUrl;
+if (window.location.protocol === 'https:') {
+    targetUrl = 'https://project-curtain.avosapps.com/';
+} else {
+    targetUrl = 'http://project-curtain.avosapps.com/';
+}
+
+function sleep(numberMillis) {
     var now = new Date();
     var exitTime = now.getTime() + numberMillis;
     while (true) {
@@ -39,7 +46,7 @@ function machine_gun(bullets, scroll_time) {
 }
 
 function get_bullets(page_url, user_id) {
-    $.post("http://project-curtain.avosapps.com/getData", {
+    $.post(targetUrl+"getData", {
             page_url: page_url,
             user_id: user_id
         },

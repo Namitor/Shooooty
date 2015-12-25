@@ -8,9 +8,16 @@ var user_id = '';
 var shooter;
 var isActive = false;
 
+var targetUrl;
+if (window.location.protocol === 'https:') {
+    targetUrl = 'https://project-curtain.avosapps.com/';
+} else {
+    targetUrl = 'http://project-curtain.avosapps.com/';
+}
+
 
 function getHotChannel() {
-    window.open('http://project-curtain.avosapps.com')
+    window.open(targetUrl)
 }
 //get_userid(current_url);//首先获取userid，给全局变量user_id赋值
 
@@ -23,7 +30,7 @@ function start_shooting(page_url, sendResponse_handler) {
     //console.log('url:' + page_url);
     //console.log('userid:' + user_id);
 
-    $.post("http://project-curtain.avosapps.com/init_user", {page_url: page_url}, function (data) {
+    $.post(targetUrl+"init_user", {page_url: page_url}, function (data) {
         var jsonroot = JSON.parse(data);
         user_id = jsonroot['user_id'];
         isActive = true;
@@ -44,7 +51,7 @@ function stop_shooting(page_url, u_id, sendResponse_handler) {
 
 
 function get_status(page_url, sendResponse_handler) {//popup每次被点开后，用于获取状态
-    $.post('http://project-curtain.avosapps.com/getUserNum', {
+    $.post(targetUrl+'getUserNum', {
             page_url: page_url
         },
         function (data, status) {
@@ -60,7 +67,7 @@ function get_status(page_url, sendResponse_handler) {//popup每次被点开后�
 function onCloseTab() {//用户关闭了页面后的操作
     if (isActive) {
         clearInterval(shooter);
-        $.post('http://project-curtain.avosapps.com/logout', {
+        $.post(targetUrl+'logout', {
                 page_url: current_url,
                 user_id: user_id
             },
